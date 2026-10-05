@@ -499,6 +499,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.visual-badge-overlay .dish-badge {
+  position: static;
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .badge-text-title {
