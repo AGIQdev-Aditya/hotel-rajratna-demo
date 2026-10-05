@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website & Digital Growth Proposal | Hotel Rajratna Family Garden Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #092418;
+      --primary-light: #15452f;
+      --gold: #d99f36;
+      --gold-light: #f3c775;
+      --gold-gradient: linear-gradient(135deg, #f3c775 0%, #d99f36 50%, #b37d20 100%);
+      --text: #222;
+      --text-muted: #555;
+      --bg: #f8faf9;
+      --card-bg: #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 3rem 1rem;
+    }
+
+    .proposal-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+      border: 1px solid #e0e7e3;
+    }
+
+    /* Header Banner */
+    .proposal-header {
+      background: linear-gradient(135deg, #092418 0%, #15452f 100%);
+      color: #fff;
+      padding: 3.5rem 3rem;
+      position: relative;
+    }
+
+    .proposal-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gold-gradient);
+    }
+
+    .client-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: rgba(217, 159, 54, 0.2);
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .proposal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .proposal-subtitle {
+      font-size: 1.1rem;
+      color: #c2d6cb;
+    }
+
+    .proposal-body {
+      padding: 3.5rem 3rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      color: #092418;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .comparison-card {
+      padding: 1.75rem;
+      border-radius: 14px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .comparison-card.bad {
+      background: #fff5f5;
+      border-color: #ffd1d1;
+    }
+
+    .comparison-card.good {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+
+    .card-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .comparison-card.bad .card-label { color: #dc2626; }
+    .comparison-card.good .card-label { color: #16a34a; }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .check-list li {
+      font-size: 0.925rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    /* ROI Box */
+    .roi-box {
+      background: linear-gradient(135deg, #092418 0%, #15452f 100%);
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 2.5rem 0;
+      border: 1px solid var(--gold);
+    }
+
+    .roi-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .roi-stat {
+      background: rgba(255,255,255,0.06);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid rgba(217, 159, 54, 0.3);
+    }
+
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .stat-desc {
+      font-size: 0.825rem;
+      color: #c9ded3;
+      margin-top: 0.25rem;
+    }
+
+    /* Pricing Plans */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #d5ded9;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(217, 159, 54, 0.2);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold-gradient);
+      color: #092418;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.85rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    .plan-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 1rem;
+    }
+
+    .plan-price span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #666;
+    }
+
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      color: #444;
+    }
+
+    .plan-features li::before {
+      content: '✓';
+      color: #16a34a;
+      font-weight: 800;
+      margin-right: 0.5rem;
+    }
+
+    /* Actions */
+    .cta-strip {
+      background: #f0fdf4;
+      border: 2px dashed #16a34a;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #25d366;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .proposal-header, .proposal-body { padding: 2rem 1.5rem; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .proposal-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="proposal-container">
+    <!-- Header -->
+    <div class="proposal-header">
+      <span class="client-badge">Exclusive Proposal</span>
+      <h1 class="proposal-title">Digital Flagship & Event Growth Solution</h1>
+      <div class="proposal-subtitle">Prepared specifically for: <strong>Hotel Rajratna Family Garden Restaurant</strong> (Lohegaon, Pune)</div>
+    </div>
+
+    <div class="proposal-body">
+      <!-- Section 1 -->
+      <h2 class="section-title"><span>1</span> The Business Challenge & Opportunity</h2>
+      <p>
+        Hotel Rajratna is renowned across Lohegaon and Dhanori for its succulent <strong>Chicken Raan</strong>, authentic <strong>Gavran Mutton Thalis</strong>, and beautiful <strong>open-air garden dining</strong>.
+      </p>
+      <p>
+        However, currently all digital search traffic goes through third-party platforms like Zomato and Swiggy. This leads to two critical revenue leaks:
+      </p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card bad">
+          <div class="card-label">❌ Current State (Without Official Website)</div>
+          <ul class="check-list">
+            <li><strong>20% - 30% Commissions:</strong> Paying hefty platform fees on every takeaway or home order.</li>
+            <li><strong>Zero Lawn Inquiries:</strong> College students at D.Y. Patil and local families don't have a direct portal to book birthday parties & anniversary buffets.</li>
+            <li><strong>No Direct Google Ranking:</strong> Searches for "Garden restaurant near DY Patil" promote competitors rather than Hotel Rajratna.</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card good">
+          <div class="card-label">✅ With Your New Rajratna Website</div>
+          <ul class="check-list">
+            <li><strong>0% Commission Direct Orders:</strong> Instant WhatsApp 1-tap table booking and food orders keep 100% of the revenue in your pocket.</li>
+            <li><strong>Banquet & Party Lawn Lead Machine:</strong> High-ticket bookings (₹25k–₹1L per party) delivered straight to your WhatsApp.</li>
+            <li><strong>Digital QR Stands on Tables:</strong> Modern contactless dining experience that impresses your guests.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 2: ROI -->
+      <div class="roi-box">
+        <div class="roi-title">Estimated Annual ROI for Hotel Rajratna</div>
+        <p style="color: #c9ded3;">Here is how this website pays for itself within the very first 30 days:</p>
+
+        <div class="roi-grid">
+          <div class="roi-stat">
+            <div class="stat-val">₹36,000+</div>
+            <div class="stat-desc">Commission saved per year on direct WhatsApp orders</div>
+          </div>
+          <div class="roi-stat">
+            <div class="stat-val">₹1,50,000+</div>
+            <div class="stat-desc">Estimated revenue from just 3 to 4 party lawn event bookings</div>
+          </div>
+          <div class="roi-stat">
+            <div class="stat-val">100% Free</div>
+            <div class="stat-desc">Pre-built working demo ready for immediate deployment</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Pricing -->
+      <h2 class="section-title"><span>2</span> Transparent Investment Options</h2>
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card">
+          <div>
+            <div class="plan-name">Starter Launch</div>
+            <div class="plan-price">₹7,999 <span>one-time</span></div>
+            <ul class="plan-features">
+              <li>Complete Responsive Showcase Website</li>
+              <li>WhatsApp Direct Table Booking</li>
+              <li>Digital Interactive Food Menu</li>
+              <li>Google Maps & Zomato 4.1 Integration</li>
+              <li>1 Year Free High-Speed Hosting</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="pricing-card featured">
+          <div class="featured-tag">Recommended</div>
+          <div>
+            <div class="plan-name">Pro Growth Package</div>
+            <div class="plan-price">₹11,999 <span>+ ₹2,500/yr AMC</span></div>
+            <ul class="plan-features">
+              <li>Everything in Starter Launch</li>
+              <li><strong>Party Lawn & Banquet Lead Funnel</strong></li>
+              <li><strong>Marathi + English Dual Language</strong></li>
+              <li><strong>Custom Domain (.com / .in)</strong></li>
+              <li>25 Printed Acrylic Table QR Stands</li>
+              <li>Monthly Menu & Price Updates</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card">
+          <div>
+            <div class="plan-name">VIP Marketing Suite</div>
+            <div class="plan-price">₹18,500 <span>complete</span></div>
+            <ul class="plan-features">
+              <li>Everything in Pro Package</li>
+              <li>Google Business Profile Ranking (Local SEO)</li>
+              <li>50 Premium Wooden Table QR Stands</li>
+              <li>Instagram Promo Reel Template</li>
+              <li>Priority 24/7 Technical Support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="cta-strip">
+        <h3 style="font-size: 1.4rem; color: #092418;">Ready to Launch Hotel Rajratna's Official Website?</h3>
+        <p style="margin: 0.5rem 0 1rem 0;">We already have the working demo ready for your review. We can go live within 24 hours!</p>
+        <a href="https://wa.me/919607667961?text=Hello%20Mr.%20Khandave%2C%20I%20reviewed%20the%20website%20proposal%20for%20Hotel%20Rajratna.%20Let's%20go%20live!" class="cta-btn">
+          <span>📲 Contact via WhatsApp (+91 9607667961)</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
