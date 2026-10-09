@@ -49,12 +49,17 @@ html {
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1496,15 +1501,19 @@ button {
   z-index: 1;
 }
 
-/* 2. Scroll Reveal Animations */
+/* 2. Scroll Reveal Animations - Visible by default for reliable pitch presentation */
 .reveal {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.is-visible {
+.js-reveal .reveal.reveal-queued:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.js-reveal .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

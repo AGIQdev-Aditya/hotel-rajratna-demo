@@ -759,6 +759,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealElements.length > 0) {
+    document.documentElement.classList.add('js-reveal');
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -767,11 +769,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.15
+      rootMargin: '120px 0px 60px 0px',
+      threshold: 0
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 150) {
+        el.classList.add('is-visible');
+      } else {
+        el.classList.add('reveal-queued');
+        revealObserver.observe(el);
+      }
+    });
   } else {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
