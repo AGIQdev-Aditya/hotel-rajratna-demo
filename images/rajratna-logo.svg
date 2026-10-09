@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <!-- Royal Gold Linear Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1c5"/>
+      <stop offset="25%" stop-color="#f5d58b"/>
+      <stop offset="50%" stop-color="#dfa845"/>
+      <stop offset="75%" stop-color="#b88224"/>
+      <stop offset="100%" stop-color="#7a5312"/>
+    </linearGradient>
+
+    <!-- Deep Emerald Radial Gradient -->
+    <radialGradient id="emeraldBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#144630"/>
+      <stop offset="70%" stop-color="#09271a"/>
+      <stop offset="100%" stop-color="#04140d"/>
+    </radialGradient>
+
+    <!-- Sparkling Ruby Gem Gradient -->
+    <radialGradient id="rubyGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff7b89"/>
+      <stop offset="40%" stop-color="#e62035"/>
+      <stop offset="100%" stop-color="#730510"/>
+    </radialGradient>
+
+    <!-- Golden Shimmer Glow -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ornate Beaded Rim -->
+  <circle cx="120" cy="120" r="114" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="2 3"/>
+  <circle cx="120" cy="120" r="108" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Inner Deep Emerald Canvas -->
+  <circle cx="120" cy="120" r="104" fill="url(#emeraldBg)"/>
+
+  <!-- Subtle Concentric Crest Ring -->
+  <circle cx="120" cy="120" r="96" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="120" cy="120" r="92" fill="none" stroke="url(#goldGrad)" stroke-width="1.8"/>
+
+  <!-- Garden Laurel Leaves (Left Branch) -->
+  <g fill="url(#goldGrad)" stroke="#7a5312" stroke-width="0.3">
+    <!-- Left laurel stems & leaves -->
+    <path d="M46 130 C44 110, 50 88, 64 70 C63 76, 60 84, 56 92 C54 98, 52 108, 52 120 Z" opacity="0.6"/>
+    <!-- Leaf clusters left -->
+    <path d="M40 128 C34 122, 36 112, 45 116 C48 122, 44 128, 40 128 Z"/>
+    <path d="M43 112 C36 104, 40 94, 50 100 C52 106, 48 112, 43 112 Z"/>
+    <path d="M49 96 C42 88, 47 78, 56 86 C58 92, 54 96, 49 96 Z"/>
+    <path d="M58 82 C53 72, 60 64, 68 73 C69 79, 64 83, 58 82 Z"/>
+    <path d="M70 69 C66 60, 75 52, 82 63 C81 68, 76 71, 70 69 Z"/>
+  </g>
+
+  <!-- Garden Laurel Leaves (Right Branch) -->
+  <g fill="url(#goldGrad)" stroke="#7a5312" stroke-width="0.3">
+    <!-- Right laurel stems & leaves -->
+    <path d="M194 130 C196 110, 190 88, 176 70 C177 76, 180 84, 184 92 C186 98, 188 108, 188 120 Z" opacity="0.6"/>
+    <!-- Leaf clusters right -->
+    <path d="M200 128 C206 122, 204 112, 195 116 C192 122, 196 128, 200 128 Z"/>
+    <path d="M197 112 C204 104, 200 94, 190 100 C188 106, 192 112, 197 112 Z"/>
+    <path d="M191 96 C198 88, 193 78, 184 86 C182 92, 186 96, 191 96 Z"/>
+    <path d="M182 82 C187 72, 180 64, 172 73 C171 79, 176 83, 182 82 Z"/>
+    <path d="M170 69 C174 60, 165 52, 158 63 C159 68, 164 71, 170 69 Z"/>
+  </g>
+
+  <!-- Crown Base & Cushion -->
+  <path d="M72 136 Q120 144 168 136 L164 126 Q120 133 76 126 Z" fill="url(#goldGrad)"/>
+  <rect x="74" y="128" width="92" height="6" rx="2" fill="url(#goldGrad)" stroke="#66440e" stroke-width="0.5"/>
+
+  <!-- Crown Base Jewels -->
+  <circle cx="82" cy="131" r="2.2" fill="url(#rubyGrad)"/>
+  <circle cx="95" cy="131" r="2" fill="#fff"/>
+  <circle cx="108" cy="131" r="2.2" fill="url(#rubyGrad)"/>
+  <circle cx="120" cy="131" r="2.5" fill="#fff"/>
+  <circle cx="132" cy="131" r="2.2" fill="url(#rubyGrad)"/>
+  <circle cx="145" cy="131" r="2" fill="#fff"/>
+  <circle cx="158" cy="131" r="2.2" fill="url(#rubyGrad)"/>
+
+  <!-- Royal 5-Point Crown Body -->
+  <path d="M76 126 L80 92 L98 108 L120 74 L142 108 L160 92 L164 126 Q120 133 76 126 Z" fill="url(#goldGrad)" stroke="#66440e" stroke-width="0.8"/>
+
+  <!-- Inner Velvet Crown Cutout -->
+  <path d="M84 123 L87 99 L100 111 L120 86 L140 111 L153 99 L156 123 Q120 129 84 123 Z" fill="#09271a" opacity="0.45"/>
+
+  <!-- Crown Tip Jewels / Pearls -->
+  <circle cx="80" cy="91" r="4.5" fill="url(#goldGrad)" stroke="#7a5312" stroke-width="0.5"/>
+  <circle cx="80" cy="91" r="2.5" fill="#fff"/>
+
+  <circle cx="98" cy="107" r="3.5" fill="url(#goldGrad)"/>
+  <circle cx="98" cy="107" r="1.8" fill="url(#rubyGrad)"/>
+
+  <!-- Central Tallest Crown Apex Pearl -->
+  <circle cx="120" cy="73" r="6" fill="url(#goldGrad)" stroke="#7a5312" stroke-width="0.6" filter="url(#goldGlow)"/>
+  <circle cx="120" cy="73" r="3.2" fill="#fff"/>
+
+  <circle cx="142" cy="107" r="3.5" fill="url(#goldGrad)"/>
+  <circle cx="142" cy="107" r="1.8" fill="url(#rubyGrad)"/>
+
+  <circle cx="160" cy="91" r="4.5" fill="url(#goldGrad)" stroke="#7a5312" stroke-width="0.5"/>
+  <circle cx="160" cy="91" r="2.5" fill="#fff"/>
+
+  <!-- Central Faceted Royal Gem ("Ratna") -->
+  <g transform="translate(120, 114)">
+    <!-- Gem outer facets -->
+    <polygon points="0,-14 12,-6 14,8 0,16 -14,8 -12,-6" fill="url(#rubyGrad)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <polygon points="0,-14 6,-4 0,16 -6,-4" fill="#ff4d5e" opacity="0.6"/>
+    <polygon points="0,-14 12,-6 6,-4" fill="#ff7b89" opacity="0.8"/>
+    <!-- Center sparkle -->
+    <circle cx="-2" cy="-4" r="2" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Ornate Golden Banner Ribbon for Title -->
+  <g id="ribbon">
+    <!-- Ribbon tails -->
+    <path d="M42 166 L62 154 L62 176 L42 188 L48 177 Z" fill="#9c6d1d"/>
+    <path d="M198 166 L178 154 L178 176 L198 188 L192 177 Z" fill="#9c6d1d"/>
+
+    <!-- Main ribbon body -->
+    <path d="M58 156 Q120 166 182 156 L180 182 Q120 192 60 182 Z" fill="url(#goldGrad)" stroke="#66440e" stroke-width="1"/>
+    <path d="M62 160 Q120 169 178 160" fill="none" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Banner Typography: RAJRATNA -->
+    <text x="120" y="174" font-family="'Playfair Display', serif, Georgia" font-size="13" font-weight="900" fill="#09271a" text-anchor="middle" letter-spacing="2.5">RAJRATNA</text>
+  </g>
+
+  <!-- Subtitle Text Curved / Centered -->
+  <text x="120" y="202" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2.2">FAMILY GARDEN RESTO</text>
+
+  <!-- Bottom Mini Five-Star Rating Cluster -->
+  <g fill="url(#goldGrad)" transform="translate(120, 213)">
+    <polygon points="0,-3 1,-1 3,-1 1.5,0.5 2,2.5 0,1.2 -2,2.5 -1.5,0.5 -3,-1 -1,-1" transform="translate(-16, 0) scale(0.9)"/>
+    <polygon points="0,-3 1,-1 3,-1 1.5,0.5 2,2.5 0,1.2 -2,2.5 -1.5,0.5 -3,-1 -1,-1" transform="translate(-8, 0) scale(0.9)"/>
+    <polygon points="0,-3 1,-1 3,-1 1.5,0.5 2,2.5 0,1.2 -2,2.5 -1.5,0.5 -3,-1 -1,-1" transform="translate(0, 0) scale(1.1)"/>
+    <polygon points="0,-3 1,-1 3,-1 1.5,0.5 2,2.5 0,1.2 -2,2.5 -1.5,0.5 -3,-1 -1,-1" transform="translate(8, 0) scale(0.9)"/>
+    <polygon points="0,-3 1,-1 3,-1 1.5,0.5 2,2.5 0,1.2 -2,2.5 -1.5,0.5 -3,-1 -1,-1" transform="translate(16, 0) scale(0.9)"/>
+  </g>
+</svg>

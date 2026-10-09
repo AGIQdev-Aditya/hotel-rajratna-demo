@@ -259,6 +259,307 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==========================================================
+  // Table Order Tray (Interactive Multi-Dish WhatsApp Cart)
+  // ==========================================================
+  const orderTrayBar = document.getElementById('tableOrderTray');
+  const trayItemCount = document.getElementById('trayItemCount');
+  const trayTotalPrice = document.getElementById('trayTotalPrice');
+  const openTrayModalBtn = document.getElementById('openTrayModalBtn');
+  const trayModal = document.getElementById('trayModal');
+  const closeTrayModalBtn = document.getElementById('closeTrayModalBtn');
+  const trayModalList = document.getElementById('trayModalList');
+  const trayModalTotal = document.getElementById('trayModalTotal');
+  const trayOrderForm = document.getElementById('trayOrderForm');
+  const addTrayBtns = document.querySelectorAll('.add-tray-btn');
+
+  let orderTray = []; // [{ dish, price, priceNum, qty }]
+
+  const parsePrice = (priceStr) => {
+    const match = priceStr.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  };
+
+  const updateTrayUI = () => {
+    let totalCount = 0;
+    let totalPrice = 0;
+
+    orderTray.forEach(item => {
+      totalCount += item.qty;
+      totalPrice += item.priceNum * item.qty;
+    });
+
+    if (trayItemCount) trayItemCount.textContent = totalCount;
+    if (trayTotalPrice) trayTotalPrice.textContent = `₹${totalPrice.toLocaleString('en-IN')}`;
+    if (trayModalTotal) trayModalTotal.textContent = `₹${totalPrice.toLocaleString('en-IN')}`;
+
+    if (orderTrayBar) {
+      if (totalCount > 0) {
+        orderTrayBar.classList.add('show');
+      } else {
+        orderTrayBar.classList.remove('show');
+        closeModal(trayModal);
+      }
+    }
+
+    // Update dish cards "+ Add" button state
+    addTrayBtns.forEach(btn => {
+      const dish = btn.getAttribute('data-dish');
+      const inTray = orderTray.find(item => item.dish === dish);
+      if (inTray) {
+        btn.classList.add('in-tray');
+        btn.textContent = `✓ ${inTray.qty} in Tray`;
+      } else {
+        btn.classList.remove('in-tray');
+        btn.textContent = '+ Add';
+      }
+    });
+
+    renderTrayModalItems();
+  };
+
+  const renderTrayModalItems = () => {
+    if (!trayModalList) return;
+    if (orderTray.length === 0) {
+      trayModalList.innerHTML = `<div style="text-align:center; padding: 1.5rem; color: var(--text-muted);">Your order tray is empty. Tap <strong>+ Add</strong> on any dish in the menu to add items.</div>`;
+      return;
+    }
+
+    trayModalList.innerHTML = orderTray.map((item, idx) => `
+      <div class="tray-modal-item">
+        <div>
+          <div class="tray-item-title">${item.dish}</div>
+          <div class="tray-item-price">₹${item.priceNum} each • Subtotal: ₹${(item.priceNum * item.qty).toLocaleString('en-IN')}</div>
+        </div>
+        <div class="tray-qty-controls">
+          <button type="button" class="tray-qty-btn" onclick="window.changeTrayQty(${idx}, -1)">−</button>
+          <span class="tray-qty-num">${item.qty}</span>
+          <button type="button" class="tray-qty-btn" onclick="window.changeTrayQty(${idx}, 1)">+</button>
+          <button type="button" class="tray-remove-btn" onclick="window.removeTrayItem(${idx})" title="Remove item">×</button>
+        </div>
+      </div>
+    `).join('');
+  };
+
+  window.changeTrayQty = (idx, delta) => {
+    if (orderTray[idx]) {
+      orderTray[idx].qty += delta;
+      if (orderTray[idx].qty <= 0) {
+        orderTray.splice(idx, 1);
+      }
+      updateTrayUI();
+    }
+  };
+
+  window.removeTrayItem = (idx) => {
+    if (orderTray[idx]) {
+      showToast(`Removed ${orderTray[idx].dish} from tray`);
+      orderTray.splice(idx, 1);
+      updateTrayUI();
+    }
+  };
+
+  addTrayBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dish = btn.getAttribute('data-dish') || 'Dish';
+      const priceStr = btn.getAttribute('data-price') || '₹0';
+      const priceNum = parsePrice(priceStr);
+
+      const existing = orderTray.find(item => item.dish === dish);
+      if (existing) {
+        existing.qty += 1;
+        showToast(`Added another ${dish} (${existing.qty} total)`);
+      } else {
+        orderTray.push({ dish, price: priceStr, priceNum, qty: 1 });
+        showToast(`Added ${dish} to Table Order Tray`);
+      }
+      updateTrayUI();
+    });
+  });
+
+  openTrayModalBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal(trayModal);
+  });
+
+  closeTrayModalBtn?.addEventListener('click', () => {
+    closeModal(trayModal);
+  });
+
+  // Table Order Form -> Direct WhatsApp
+  if (trayOrderForm) {
+    trayOrderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (orderTray.length === 0) {
+        showToast('Please add at least 1 dish to order');
+        return;
+      }
+
+      const seating = document.getElementById('trayTable')?.value || 'Garden Lawn';
+      const tableNo = document.getElementById('trayTableNo')?.value.trim();
+      const guestName = document.getElementById('trayGuestName')?.value.trim();
+      const notes = document.getElementById('trayNotes')?.value.trim();
+
+      let totalPrice = 0;
+      let itemsListText = '';
+      orderTray.forEach((item, index) => {
+        const itemSubtotal = item.priceNum * item.qty;
+        totalPrice += itemSubtotal;
+        itemsListText += `${index + 1}. *${item.dish}* x ${item.qty} = ₹${itemSubtotal}%0A`;
+      });
+
+      const message = `👋 *HOTEL RAJRATNA TABLE ORDER*%0A%0A🌿 *Seating Area:* ${encodeURIComponent(seating)}${tableNo ? ` (${encodeURIComponent(tableNo)})` : ''}%0A👤 *Guest Name:* ${encodeURIComponent(guestName)}%0A%0A📋 *ORDERED DISHES:*%0A${itemsListText}%0A💰 *Estimated Bill:* *₹${totalPrice.toLocaleString('en-IN')}*%0A📝 *Kitchen Notes:* ${encodeURIComponent(notes || 'None')}%0A%0APlease confirm our table order and preparation time. Thank you!`;
+
+      closeModal(trayModal);
+      showToast('Opening WhatsApp to place your table order...');
+      setTimeout(() => {
+        window.open(`https://wa.me/919607667961?text=${message}`, '_blank');
+        orderTray = [];
+        updateTrayUI();
+      }, 700);
+    });
+  }
+
+  // ==========================================================
+  // Garden Evening Ambiance Sound Synthesizer (Web Audio API)
+  // ==========================================================
+  const ambianceBtn = document.getElementById('ambianceAudioBtn');
+  let audioContext = null;
+  let isAmbiancePlaying = false;
+  let masterGain = null;
+  let ambientOscillators = [];
+  let ambientNoiseNode = null;
+  let cricketTimer = null;
+
+  const startAmbianceAudio = () => {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return false;
+      audioContext = new AudioCtx();
+
+      masterGain = audioContext.createGain();
+      masterGain.gain.setValueAtTime(0.01, audioContext.currentTime);
+      masterGain.gain.exponentialRampToValueAtTime(0.045, audioContext.currentTime + 1.5);
+      masterGain.connect(audioContext.destination);
+
+      // 1. Soft Warm Breeze Drone
+      const bufferSize = audioContext.sampleRate * 2;
+      const noiseBuffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1;
+      }
+      ambientNoiseNode = audioContext.createBufferSource();
+      ambientNoiseNode.buffer = noiseBuffer;
+      ambientNoiseNode.loop = true;
+
+      const filter = audioContext.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(240, audioContext.currentTime);
+
+      const noiseGain = audioContext.createGain();
+      noiseGain.gain.setValueAtTime(0.015, audioContext.currentTime);
+
+      ambientNoiseNode.connect(filter);
+      filter.connect(noiseGain);
+      noiseGain.connect(masterGain);
+      ambientNoiseNode.start();
+
+      // 2. Harmonic Evening Garden Chords (D-A-F# calming drone)
+      const freqs = [146.83, 220.00, 369.99];
+      freqs.forEach(f => {
+        const osc = audioContext.createOscillator();
+        const g = audioContext.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(f, audioContext.currentTime);
+        g.gain.setValueAtTime(0.012, audioContext.currentTime);
+        osc.connect(g);
+        g.connect(masterGain);
+        osc.start();
+        ambientOscillators.push(osc);
+      });
+
+      // 3. Gentle Evening Lawn Crickets
+      cricketTimer = setInterval(() => {
+        if (!isAmbiancePlaying || !audioContext) return;
+        try {
+          const cOsc = audioContext.createOscillator();
+          const cGain = audioContext.createGain();
+          cOsc.type = 'triangle';
+          cOsc.frequency.setValueAtTime(4500 + Math.random() * 400, audioContext.currentTime);
+          cGain.gain.setValueAtTime(0.003, audioContext.currentTime);
+          cGain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.12);
+          cOsc.connect(cGain);
+          cGain.connect(masterGain);
+          cOsc.start();
+          cOsc.stop(audioContext.currentTime + 0.15);
+        } catch(e) {}
+      }, 750);
+
+      isAmbiancePlaying = true;
+      return true;
+    } catch (e) {
+      console.warn('Audio Context blocked or unsupported', e);
+      return false;
+    }
+  };
+
+  const stopAmbianceAudio = () => {
+    if (masterGain && audioContext) {
+      masterGain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.8);
+      setTimeout(() => {
+        ambientOscillators.forEach(o => { try { o.stop(); } catch(e){} });
+        ambientOscillators = [];
+        if (ambientNoiseNode) { try { ambientNoiseNode.stop(); } catch(e){} }
+        if (cricketTimer) clearInterval(cricketTimer);
+        if (audioContext && audioContext.state !== 'closed') { audioContext.close(); }
+        isAmbiancePlaying = false;
+      }, 900);
+    } else {
+      isAmbiancePlaying = false;
+    }
+  };
+
+  if (ambianceBtn) {
+    ambianceBtn.addEventListener('click', () => {
+      if (!isAmbiancePlaying) {
+        const success = startAmbianceAudio();
+        if (success) {
+          ambianceBtn.classList.add('active');
+          const txt = ambianceBtn.querySelector('.ambiance-text');
+          if (txt) txt.textContent = 'Garden Sound: On 🎶';
+          showToast('Playing relaxing evening garden ambiance...');
+        }
+      } else {
+        stopAmbianceAudio();
+        ambianceBtn.classList.remove('active');
+        const txt = ambianceBtn.querySelector('.ambiance-text');
+        if (txt) txt.textContent = 'Garden Sound';
+        showToast('Garden ambiance muted');
+      }
+    });
+  }
+
+  // Active state for mobile bottom bar
+  const mobileBarBtns = document.querySelectorAll('.mobile-bar-btn');
+  const sectionsToWatch = document.querySelectorAll('section[id], header[id]');
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    sectionsToWatch.forEach(sec => {
+      const top = sec.offsetTop - 150;
+      if (window.scrollY >= top) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+    if (currentId) {
+      mobileBarBtns.forEach(btn => {
+        const href = btn.getAttribute('href');
+        btn.classList.toggle('active', href === `#${currentId}`);
+      });
+    }
+  });
+
   // English / Marathi Language Switcher
   const langToggle = document.getElementById('langToggle');
   let currentLang = 'en';

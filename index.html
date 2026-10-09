@@ -67,11 +67,14 @@
           <span>DY Patil Road, Lohegaon, Pune 411047</span>
         </div>
         <div class="top-bar-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>Open Daily: 11:00 AM – 11:30 PM</span>
+          <span class="status-pulse-dot"></span>
+          <span>Open Today: 11:00 AM – 11:30 PM • <strong>Live Garden Dining</strong></span>
         </div>
       </div>
       <div class="top-bar-right">
+        <button id="ambianceAudioBtn" class="ambiance-btn" aria-label="Toggle Garden Evening Ambiance" title="Click to play relaxing garden ambiance sound">
+          <span class="music-icon">🎵</span> <span class="ambiance-text">Garden Sound</span>
+        </button>
         <div class="top-bar-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           <a href="tel:+919607667961" class="top-bar-link">+91 9607667961</a> / <a href="tel:+918698601010" class="top-bar-link">+91 8698601010</a>
@@ -94,19 +97,7 @@
       <a href="#" class="brand-logo">
         <div class="brand-icon">
           <!-- Royal Rajratna Crown & Gem Crest -->
-          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18.5" stroke="#092418" stroke-width="1.5" stroke-dasharray="2 2"/>
-            <circle cx="20" cy="20" r="16.5" stroke="#092418" stroke-width="1.2"/>
-            <path d="M10 24L12.5 14L16.5 19L20 11L23.5 19L27.5 14L30 24H10Z" fill="#092418"/>
-            <rect x="9.5" y="25" width="21" height="3" rx="1.5" fill="#092418"/>
-            <polygon points="20,14 22,18 20,22 18,18" fill="#d99f36"/>
-            <circle cx="12.5" cy="13" r="1.5" fill="#092418"/>
-            <circle cx="20" cy="10" r="1.8" fill="#092418"/>
-            <circle cx="27.5" cy="13" r="1.5" fill="#092418"/>
-            <circle cx="13" cy="26.5" r="0.9" fill="#f3c775"/>
-            <circle cx="20" cy="26.5" r="0.9" fill="#f3c775"/>
-            <circle cx="27" cy="26.5" r="0.9" fill="#f3c775"/>
-          </svg>
+          <img src="images/rajratna-logo.svg" alt="Hotel Rajratna Crest" width="46" height="46">
         </div>
         <div class="brand-info">
           <span class="brand-name">HOTEL RAJRATNA</span>
@@ -581,7 +572,7 @@
           <p class="item-desc">Tender whole chicken leg slow-braised with aromatic hand-ground spices and caramelized onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Chef Special</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Raan Masala" data-price="₹650">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Raan Masala\" data-price=\"₹650\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Raan Masala\" data-price=\"₹650\">Order</button></div>
           </div>
         </div>
 
@@ -597,7 +588,7 @@
           <p class="item-desc">Authentic village-style mutton sukka, spicy Kala Rassa, cooling Pandhra Rassa, 2 hot Bhakris, and Indrayani rice.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Best Seller</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Gavran Mutton Thali" data-price="₹390">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Gavran Mutton Thali\" data-price=\"₹390\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Gavran Mutton Thali\" data-price=\"₹390\">Order</button></div>
           </div>
         </div>
 
@@ -613,7 +604,7 @@
           <p class="item-desc">Chicken Sukka, flavorful Chicken Rassa, Egg Curry, 2 Chapati/Bhakri, aromatic Rice & fresh koshimbir.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Complete Meal</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Special Chicken Thali" data-price="₹310">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Special Chicken Thali\" data-price=\"₹310\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Special Chicken Thali\" data-price=\"₹310\">Order</button></div>
           </div>
         </div>
 
@@ -629,7 +620,7 @@
           <p class="item-desc">Chef's royal stuffed cottage cheese creation layered with dry fruits in a rich golden makhani gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">House Specialty</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Rajratna Special" data-price="₹290">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Rajratna Special\" data-price=\"₹290\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Rajratna Special\" data-price=\"₹290\">Order</button></div>
           </div>
         </div>
 
@@ -645,7 +636,7 @@
           <p class="item-desc">Signature claypot chicken slow-simmered in rustic Maharashtrian spiced brown onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Family Favorite</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Handi" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Handi\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Handi\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -661,7 +652,7 @@
           <p class="item-desc">Konkani coastal handi simmered with fresh roasted coconut paste, triphala, and authentic Malwani masala.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Malwani Special</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Malwani Handi" data-price="₹499">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Malwani Handi\" data-price=\"₹499\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Malwani Handi\" data-price=\"₹499\">Order</button></div>
           </div>
         </div>
 
@@ -677,7 +668,7 @@
           <p class="item-desc">Grand sizzling assortment of Veg Manchurian, Paneer Chilly, Veg Crispy, and Golden Spring Rolls.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Grand Platter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chinese Veg Platter" data-price="₹699">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chinese Veg Platter\" data-price=\"₹699\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chinese Veg Platter\" data-price=\"₹699\">Order</button></div>
           </div>
         </div>
 
@@ -693,7 +684,7 @@
           <p class="item-desc">Fiery tender chicken cuts simmered in authentic Kolhapuri red lavangi chili and poppy seed gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Kolhapuri Fiery</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Kolhapuri" data-price="₹349">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Kolhapuri\" data-price=\"₹349\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Kolhapuri\" data-price=\"₹349\">Order</button></div>
           </div>
         </div>
 
@@ -709,7 +700,7 @@
           <p class="item-desc">Boneless chicken slow-roasted in an iron kadai with thick caramelized onion, tomato, and whole roasted spices.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Pan Roasted</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Bhuna" data-price="₹379">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Bhuna\" data-price=\"₹379\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Bhuna\" data-price=\"₹379\">Order</button></div>
           </div>
         </div>
 
@@ -725,7 +716,7 @@
           <p class="item-desc">Rich Mughlai-style chicken cooked in a luxurious cashew-nut, cream, and saffron spiced velvety golden gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Royal Mughlai</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Maharaja" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Maharaja\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Maharaja\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -741,7 +732,7 @@
           <p class="item-desc">Charcoal-grilled tandoori chicken tikka pieces finished in an aromatic spiced buttery tomato-fenugreek gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Tandoor Classic</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Tikka Masala" data-price="₹379">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Tikka Masala\" data-price=\"₹379\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Tikka Masala\" data-price=\"₹379\">Order</button></div>
           </div>
         </div>
 
@@ -757,7 +748,7 @@
           <p class="item-desc">Succulent bone-in chicken cuts simmered together with spiced minced chicken (keema) in a hearty rich gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Double Chicken</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Rara Masala" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Rara Masala\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Rara Masala\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -773,7 +764,7 @@
           <p class="item-desc">Spicy chicken curry finished with live charcoal 'dhungar' smoke and aromatic crushed cloves.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Smoked Charcoal</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Angara Masala" data-price="₹429">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Angara Masala\" data-price=\"₹429\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Angara Masala\" data-price=\"₹429\">Order</button></div>
           </div>
         </div>
 
@@ -789,7 +780,7 @@
           <p class="item-desc">Exquisite chicken preparation cooked in a rich onion-cashew reduction with chef secret spices and egg garnish.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Chef Recipe</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Lajawab" data-price="₹429">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Lajawab\" data-price=\"₹429\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Lajawab\" data-price=\"₹429\">Order</button></div>
           </div>
         </div>
 
@@ -805,7 +796,7 @@
           <p class="item-desc">Punjabi dhaba-style chicken simmered in generous white butter, crushed whole coriander, and kasuri methi.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Punjabi Style</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Amritsari" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Amritsari\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Amritsari\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -821,7 +812,7 @@
           <p class="item-desc">Juicy spiced chicken roll blanketed inside a delicate egg omelette, drenched in aromatic makhani gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Egg Blanket</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Patiyala" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Patiyala\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Patiyala\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -837,7 +828,7 @@
           <p class="item-desc">Thick spicy caramelized onion masala clinging tightly onto succulent bone-in chicken cuts with fresh coriander.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Thick Masala</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Lapeta" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Lapeta\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Lapeta\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -853,7 +844,7 @@
           <p class="item-desc">Fragrant Lahori-style chicken stewed with coarse cracked black pepper, fresh ginger juliennes, and tomatoes.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Black Pepper</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Lahori" data-price="₹369">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Lahori\" data-price=\"₹369\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Lahori\" data-price=\"₹369\">Order</button></div>
           </div>
         </div>
 
@@ -869,7 +860,7 @@
           <p class="item-desc">Smoky charred barbecue chicken chunks simmered in a bold, sweet-and-smoky spiced tomato barbecue gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Smoky BBQ</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken BBQ Masala" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken BBQ Masala\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken BBQ Masala\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -885,7 +876,7 @@
           <p class="item-desc">Dry roasted grated coconut, curry leaves, and Malwani spice tempered tender chicken cuts.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Coastal Dry</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Malwani Sukka" data-price="₹320">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Malwani Sukka\" data-price=\"₹320\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Malwani Sukka\" data-price=\"₹320\">Order</button></div>
           </div>
         </div>
 
@@ -901,7 +892,7 @@
           <p class="item-desc">Spiced vegetable cutlet dumplings tossed in fiery Kolhapuri red gravy with fresh coriander.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Kolhapuri Style</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Maratha" data-price="₹260">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Maratha\" data-price=\"₹260\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Maratha\" data-price=\"₹260\">Order</button></div>
           </div>
         </div>
 
@@ -917,7 +908,7 @@
           <p class="item-desc">Roasted premium whole cashew nuts simmered in a rich spiced golden onion-tomato and melon seed gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Rich & Nutty</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Kaju Masala" data-price="₹280">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Kaju Masala\" data-price=\"₹280\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Kaju Masala\" data-price=\"₹280\">Order</button></div>
           </div>
         </div>
 
@@ -933,7 +924,7 @@
           <p class="item-desc">Yellow toor dal tempered twice with pure desi ghee, burnt garlic, cumin seeds, and whole dry red chilies.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Comfort Food</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Dal Tadka Double Fry" data-price="₹180">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Dal Tadka Double Fry\" data-price=\"₹180\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Dal Tadka Double Fry\" data-price=\"₹180\">Order</button></div>
           </div>
         </div>
 
@@ -949,7 +940,7 @@
           <p class="item-desc">Soft cottage cheese cubes cooked in traditional rustic earthenware handi with rich spiced tomato-onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Family Favorite</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Handi" data-price="₹290">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Handi\" data-price=\"₹290\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Handi\" data-price=\"₹290\">Order</button></div>
           </div>
         </div>
 
@@ -965,7 +956,7 @@
           <p class="item-desc">Crisp minced vegetable dumplings tossed with ginger, garlic, green chilies, scallions, and dark soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Popular</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Manchurian" data-price="₹249">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Manchurian\" data-price=\"₹249\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Manchurian\" data-price=\"₹249\">Order</button></div>
           </div>
         </div>
 
@@ -981,7 +972,7 @@
           <p class="item-desc">Crunchy spiced vegetable florets tempered with fresh curry leaves, mustard seeds, and curd glaze.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crispy & Spicy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg 65" data-price="₹249">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg 65\" data-price=\"₹249\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg 65\" data-price=\"₹249\">Order</button></div>
           </div>
         </div>
 
@@ -997,7 +988,7 @@
           <p class="item-desc">Crispy garden vegetables stir-fried in authentic Sichuan pepper and spicy garlic chili sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Sichuan Heat</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Schezwan Dry" data-price="₹259">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Schezwan Dry\" data-price=\"₹259\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Schezwan Dry\" data-price=\"₹259\">Order</button></div>
           </div>
         </div>
 
@@ -1013,7 +1004,7 @@
           <p class="item-desc">Shredded mixed vegetables fried to golden crispness and tossed in sweet, tangy, and spicy chili glaze.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Best Seller</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Crispy" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Crispy\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Crispy\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1029,7 +1020,7 @@
           <p class="item-desc">Crispy delicate pastry wraps packed with seasoned wok-tossed cabbage, carrots, bell peppers, and scallions.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Golden Crisp</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Spring Roll" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Spring Roll\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Spring Roll\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1045,7 +1036,7 @@
           <p class="item-desc">Soft paneer cubes wok-tossed with crisp bell peppers, diced onions, green chilies, and light soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">All-Time Favorite</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Chilly" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Chilly\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Chilly\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1061,7 +1052,7 @@
           <p class="item-desc">Golden batter-fried paneer cubes in savory Manchurian sauce with chopped spring onion greens.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Indo-Chinese</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Manchurian" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Manchurian\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Manchurian\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1077,7 +1068,7 @@
           <p class="item-desc">Paneer batons coated in spicy batter, fried crisp and tossed with yogurt, curry leaves, and green chilies.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Spicy Starter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer 65" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer 65\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer 65\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1093,7 +1084,7 @@
           <p class="item-desc">Grilled cottage cheese skewers coated in rich, nutty Indonesian-style peanut satay sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Oriental Satay</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Satay Sauce" data-price="₹349">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Satay Sauce\" data-price=\"₹349\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Satay Sauce\" data-price=\"₹349\">Order</button></div>
           </div>
         </div>
 
@@ -1109,7 +1100,7 @@
           <p class="item-desc">Paneer chunks sizzling on a smoking hot iron platter with fiery bell pepper chili reduction.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Sizzling Platter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Hot Pan" data-price="₹349">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Hot Pan\" data-price=\"₹349\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Hot Pan\" data-price=\"₹349\">Order</button></div>
           </div>
         </div>
 
@@ -1125,7 +1116,7 @@
           <p class="item-desc">Finger-cut paneer fried extra crispy and tossed in sweet & spicy red schezwan chili sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crunchy Paneer</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Crispy" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Crispy\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Crispy\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1141,7 +1132,7 @@
           <p class="item-desc">Fresh button mushrooms tossed with crunchy capsicum, sliced onions, garlic, and dark soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Mushroom Starter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mushroom Chilly" data-price="₹279">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mushroom Chilly\" data-price=\"₹279\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mushroom Chilly\" data-price=\"₹279\">Order</button></div>
           </div>
         </div>
 
@@ -1157,7 +1148,7 @@
           <p class="item-desc">Crisp fried whole button mushrooms tossed in aromatic garlic-coriander Manchurian reduction.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Savory Garlic</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mushroom Manchurian" data-price="₹279">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mushroom Manchurian\" data-price=\"₹279\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mushroom Manchurian\" data-price=\"₹279\">Order</button></div>
           </div>
         </div>
 
@@ -1173,7 +1164,7 @@
           <p class="item-desc">Spiced button mushrooms fried to perfection and tossed in South Indian street-style tempering.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crispy Bites</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mushroom 65" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mushroom 65\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mushroom 65\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1189,7 +1180,7 @@
           <p class="item-desc">Crisp cauliflower florets coated in seasoned batter, fried crunchy and tossed in soy-garlic glaze.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Classic Gobi</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Gobi Manchurian" data-price="₹249">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Gobi Manchurian\" data-price=\"₹249\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Gobi Manchurian\" data-price=\"₹249\">Order</button></div>
           </div>
         </div>
 
@@ -1205,7 +1196,7 @@
           <p class="item-desc">Tender young baby corn spears batter-fried and tossed with fresh peppers, onions, and red chili sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crunchy Corn</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Baby Corn Chilly" data-price="₹269">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Baby Corn Chilly\" data-price=\"₹269\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Baby Corn Chilly\" data-price=\"₹269\">Order</button></div>
           </div>
         </div>
 
@@ -1221,7 +1212,7 @@
           <p class="item-desc">Aromatic long-grain basmati wok-tossed with shredded chicken, scrambled eggs, and spring onion greens.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Classic Wok</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Fried Rice" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Fried Rice\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Fried Rice\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1237,7 +1228,7 @@
           <p class="item-desc">Fiery wok-fried rice tossed with tender chicken, eggs, and authentic spicy Sichuan pepper paste.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fiery Schezwan</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Schezwan Fried Rice" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Schezwan Fried Rice\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Schezwan Fried Rice\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1253,7 +1244,7 @@
           <p class="item-desc">Fragrant yellow fried rice tossed with chicken, seasonal vegetables, cashew bits, and mild curry spices.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Golden Curried</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Singapore Rice" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Singapore Rice\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Singapore Rice\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1269,7 +1260,7 @@
           <p class="item-desc">Savory Hong Kong street-style wok rice with shredded chicken, dried chilies, and light oyster soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Hong Kong Soy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Hong Kong Rice" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Hong Kong Rice\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Hong Kong Rice\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1285,7 +1276,7 @@
           <p class="item-desc">Aromatic wok rice deeply infused with golden toasted burnt garlic crisps, chicken, and spring onions.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Burnt Garlic</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Burnt Garlic Fried Rice" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Burnt Garlic Fried Rice\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Burnt Garlic Fried Rice\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1301,7 +1292,7 @@
           <p class="item-desc">Legendary combo of chicken fried rice, hakka noodles, loaded schezwan chicken gravy, and fried egg.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Triple Feast</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Triple Schezwan Rice" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Triple Schezwan Rice\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Triple Schezwan Rice\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -1317,7 +1308,7 @@
           <p class="item-desc">Fresh juicy prawns wok-tossed with fragrant basmati rice, farm eggs, scallions, and light seasoning.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fresh Prawns</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Fried Rice" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Fried Rice\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Fried Rice\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -1333,7 +1324,7 @@
           <p class="item-desc">Tender ocean prawns and wok-tossed basmati rice tossed in fiery chili-garlic schezwan sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Spicy Seafood</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Schezwan Fried Rice" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Schezwan Fried Rice\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Schezwan Fried Rice\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -1349,7 +1340,7 @@
           <p class="item-desc">Grand three-in-one feast loaded with juicy sea prawns, tender chicken chunks, and farm eggs in basmati rice.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Chef Special Mix</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Non-Veg Mix Fried Rice" data-price="₹499">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Non-Veg Mix Fried Rice\" data-price=\"₹499\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Non-Veg Mix Fried Rice\" data-price=\"₹499\">Order</button></div>
           </div>
         </div>
 
@@ -1365,7 +1356,7 @@
           <p class="item-desc">Thin wheat noodles stir-fried in a roaring wok with shredded chicken, crisp cabbage, carrots, and light soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Classic Noodles</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Hakka Noodles" data-price="₹289">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Hakka Noodles\" data-price=\"₹289\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Hakka Noodles\" data-price=\"₹289\">Order</button></div>
           </div>
         </div>
 
@@ -1381,7 +1372,7 @@
           <p class="item-desc">Spicy wok noodles tossed with chicken strips, crunchy bell peppers, and zesty house-made schezwan sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Spicy Sichuan</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Schezwan Noodles" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Schezwan Noodles\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Schezwan Noodles\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1397,7 +1388,7 @@
           <p class="item-desc">Thin noodles tossed with tender chicken, spring veggies, and mild turmeric-coriander curry seasoning.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Curried Flavor</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Singapore Noodles" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Singapore Noodles\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Singapore Noodles\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1413,7 +1404,7 @@
           <p class="item-desc">Stir-fried noodles with chicken slivers in savory dark sauce with toasted sesame hints.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Hong Kong Soy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Hong Kong Noodles" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Hong Kong Noodles\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Hong Kong Noodles\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1429,7 +1420,7 @@
           <p class="item-desc">Ultimate platter of stir-fried noodles and rice served with a bowl of piping hot chicken schezwan gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Supreme Combo</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Triple Schezwan Noodles" data-price="₹399">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Triple Schezwan Noodles\" data-price=\"₹399\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Triple Schezwan Noodles\" data-price=\"₹399\">Order</button></div>
           </div>
         </div>
 
@@ -1445,7 +1436,7 @@
           <p class="item-desc">Wok-tossed noodles generously tossed with pan-seared juicy prawns, spring greens, and light soy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fresh Prawns</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Hakka Noodles" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Hakka Noodles\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Hakka Noodles\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -1461,7 +1452,7 @@
           <p class="item-desc">Fresh prawns and noodles tossed in high-flame wok with fiery red chili, garlic, and Sichuan pepper.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Spicy Prawns</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Schezwan Noodles" data-price="₹449">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Schezwan Noodles\" data-price=\"₹449\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Schezwan Noodles\" data-price=\"₹449\">Order</button></div>
           </div>
         </div>
 
@@ -1477,7 +1468,7 @@
           <p class="item-desc">Dark spicy soy broth packed with finely diced garden veggies, ginger, and crispy fried noodle garnish.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fried Noodles</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Manchow Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Manchow Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Manchow Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1493,7 +1484,7 @@
           <p class="item-desc">Tangy, spicy vegetable broth with diced tofu, button mushrooms, bamboo shoots, and crushed black pepper.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Tangy & Spicy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Hot & Sour Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Hot & Sour Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Hot & Sour Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1509,7 +1500,7 @@
           <p class="item-desc">Soothing creamy soup made from golden crushed sweet corn kernels and delicate garden vegetables.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Sweet Golden Corn</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Sweet Corn Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Sweet Corn Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Sweet Corn Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1525,7 +1516,7 @@
           <p class="item-desc">Clear refreshing broth elevated with freshly squeezed lemon juice, crushed garlic, and fresh coriander.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Zesty Lemon</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Lemon Coriander Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Lemon Coriander Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Lemon Coriander Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1541,7 +1532,7 @@
           <p class="item-desc">Light delicate vegetable broth with crunchy broccoli florets, carrots, and spring onions.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Light Broth</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Clear Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Clear Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Clear Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1557,7 +1548,7 @@
           <p class="item-desc">Traditional hearty soup made with slow-simmered ripe tomatoes, garden vegetables, beans, and herbs.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Classic Italian</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Minestrone Soup" data-price="₹139">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Minestrone Soup\" data-price=\"₹139\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Minestrone Soup\" data-price=\"₹139\">Order</button></div>
           </div>
         </div>
 
@@ -1573,7 +1564,7 @@
           <p class="item-desc">Fiery dark chicken broth with minced chicken, garlic, and coriander, served with crunchy fried noodles.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Best Seller</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Manchow Soup" data-price="₹149">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Manchow Soup\" data-price=\"₹149\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Manchow Soup\" data-price=\"₹149\">Order</button></div>
           </div>
         </div>
 
@@ -1589,7 +1580,7 @@
           <p class="item-desc">Shredded chicken in a bold, peppery broth balanced with dark Chinese vinegar and red chilies.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Tangy Heat</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Hot & Sour Soup" data-price="₹149">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Hot & Sour Soup\" data-price=\"₹149\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Hot & Sour Soup\" data-price=\"₹149\">Order</button></div>
           </div>
         </div>
 
@@ -1605,7 +1596,7 @@
           <p class="item-desc">Tender shredded chicken gently simmered with sweet golden corn and beaten egg drop swirls.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Comfort Warmth</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Sweet Corn Soup" data-price="₹149">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Sweet Corn Soup\" data-price=\"₹149\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Sweet Corn Soup\" data-price=\"₹149\">Order</button></div>
           </div>
         </div>
 
@@ -1621,7 +1612,7 @@
           <p class="item-desc">Nutritious clear chicken broth invigorated with zesty lemon, aromatic coriander, and light pepper.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Zesty Broth</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Lemon Coriander Soup" data-price="₹149">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Lemon Coriander Soup\" data-price=\"₹149\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Lemon Coriander Soup\" data-price=\"₹149\">Order</button></div>
           </div>
         </div>
 
@@ -1637,7 +1628,7 @@
           <p class="item-desc">Steaming hot aromatic clear chicken broth with tender chicken pieces and scallions.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Delicate Broth</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Clear Soup" data-price="₹149">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Clear Soup\" data-price=\"₹149\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Clear Soup\" data-price=\"₹149\">Order</button></div>
           </div>
         </div>
 
@@ -1653,7 +1644,7 @@
           <p class="item-desc">Royal Cantonese thick chicken soup enriched with egg ribbons, oriental mushrooms, and herbs.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Cantonese Deluxe</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Lung Fung Soup" data-price="₹169">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Lung Fung Soup\" data-price=\"₹169\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Lung Fung Soup\" data-price=\"₹169\">Order</button></div>
           </div>
         </div>
 
@@ -1669,7 +1660,7 @@
           <p class="item-desc">Flavor-packed dark soup simmered with fresh sea prawns, fish fillets, and crisp fried noodle topping.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Coastal Special</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Seafood Manchow Soup" data-price="₹209">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Seafood Manchow Soup\" data-price=\"₹209\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Seafood Manchow Soup\" data-price=\"₹209\">Order</button></div>
           </div>
         </div>
 
@@ -1685,7 +1676,7 @@
           <p class="item-desc">Velvety puree of fresh button mushrooms simmered with herbs, butter, and fresh cooking cream.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Rich Velouté</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Mushroom Soup" data-price="₹179">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Mushroom Soup\" data-price=\"₹179\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Mushroom Soup\" data-price=\"₹179\">Order</button></div>
           </div>
         </div>
 
@@ -1701,7 +1692,7 @@
           <p class="item-desc">Silky smooth sun-ripened tomato velouté served with buttered golden herb croutons.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Classic Soup</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Tomato Soup" data-price="₹179">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Tomato Soup\" data-price=\"₹179\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Tomato Soup\" data-price=\"₹179\">Order</button></div>
           </div>
         </div>
 
@@ -1717,7 +1708,7 @@
           <p class="item-desc">Delicately pureed seasonal garden vegetables finished with rich cream and white pepper.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Garden Fresh</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Veg Soup" data-price="₹179">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Veg Soup\" data-price=\"₹179\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Veg Soup\" data-price=\"₹179\">Order</button></div>
           </div>
         </div>
 
@@ -1733,7 +1724,7 @@
           <p class="item-desc">Fresh farm broccoli florets blended with cream and mild European seasonings.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Nutrient Rich</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Broccoli Soup" data-price="₹179">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Broccoli Soup\" data-price=\"₹179\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Broccoli Soup\" data-price=\"₹179\">Order</button></div>
           </div>
         </div>
 
@@ -1749,7 +1740,7 @@
           <p class="item-desc">Vibrant fresh green spinach puree tempered with roasted garlic and topped with fresh cream.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Wholesome Greens</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Spinach Soup" data-price="₹179">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Spinach Soup\" data-price=\"₹179\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Spinach Soup\" data-price=\"₹179\">Order</button></div>
           </div>
         </div>
 
@@ -1765,7 +1756,7 @@
           <p class="item-desc">Slow-poached tender chicken shreds in a velvety, rich white chicken cream broth.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">French Velouté</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Cream of Chicken Soup" data-price="₹199">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Cream of Chicken Soup\" data-price=\"₹199\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Cream of Chicken Soup\" data-price=\"₹199\">Order</button></div>
           </div>
         </div>
 
@@ -1781,7 +1772,7 @@
           <p class="item-desc">Crisp romaine & iceberg lettuce, herb garlic croutons, parmesan cheese shavings, and house Caesar dressing.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crisp Greens</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Caesar Salad" data-price="₹199">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Caesar Salad\" data-price=\"₹199\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Caesar Salad\" data-price=\"₹199\">Order</button></div>
           </div>
         </div>
 
@@ -1797,7 +1788,7 @@
           <p class="item-desc">Grilled herb chicken breast strips layered over crisp lettuce greens, croutons, parmesan, and creamy dressing.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Protein Salad</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Caesar Chicken Salad" data-price="₹219">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Caesar Chicken Salad\" data-price=\"₹219\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Caesar Chicken Salad\" data-price=\"₹219\">Order</button></div>
           </div>
         </div>
 
@@ -1813,7 +1804,7 @@
           <p class="item-desc">Penne pasta enveloped in a rich, buttery parmesan garlic cream sauce with fresh European herbs.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">White Cream Sauce</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Alfredo Pasta" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Alfredo Pasta\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Alfredo Pasta\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1829,7 +1820,7 @@
           <p class="item-desc">The best of both worlds — penne tossed in a creamy fusion of tangy tomato marinara and rich alfredo cream.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Rosé Sauce Blend</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Pink Tango Pasta" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Pink Tango Pasta\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Pink Tango Pasta\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1845,7 +1836,7 @@
           <p class="item-desc">Penne pasta tossed in fiery Italian tomato sauce simmered with garlic, dried chili flakes, and basil.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fiery Red Marinara</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Arbiata Pasta" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Arbiata Pasta\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Arbiata Pasta\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1861,7 +1852,7 @@
           <p class="item-desc">Gooey macaroni pasta baked in a decadent three-cheese cheddar and mozzarella molten cheese sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">3-Cheese Baked</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mac & Cheese Pasta" data-price="₹299">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mac & Cheese Pasta\" data-price=\"₹299\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mac & Cheese Pasta\" data-price=\"₹299\">Order</button></div>
           </div>
         </div>
 
@@ -1877,7 +1868,7 @@
           <p class="item-desc">Classic spaghetti gently tossed in extra virgin olive oil, sliced golden garlic cloves, chili flakes, and parsley.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Italian Classic</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Spaghetti Aglio Olio" data-price="₹349">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Spaghetti Aglio Olio\" data-price=\"₹349\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Spaghetti Aglio Olio\" data-price=\"₹349\">Order</button></div>
           </div>
         </div>
 
@@ -1893,7 +1884,7 @@
           <p class="item-desc">Fresh slice of Kingfish marinated in kokum and coastal spices, coated with crunchy rava and shallow-fried.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Coastal Kingfish</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Surmai Rava Fry" data-price="₹420">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Surmai Rava Fry\" data-price=\"₹420\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Surmai Rava Fry\" data-price=\"₹420\">Order</button></div>
           </div>
         </div>
 
@@ -1909,7 +1900,7 @@
           <p class="item-desc">Whole fresh silver pomfret fish shallow-fried on cast-iron tawa with fiery Malwani red chili garlic paste.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Catch Of The Day</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Pomfret Tawa Fry" data-price="₹450">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Pomfret Tawa Fry\" data-price=\"₹450\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Pomfret Tawa Fry\" data-price=\"₹450\">Order</button></div>
           </div>
         </div>
 
@@ -1925,7 +1916,7 @@
           <p class="item-desc">Fresh succulent prawns batter-fried in Mumbai's legendary spicy, crunchy red Koliwada batter.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Mumbai Iconic</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Koliwada" data-price="₹360">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Koliwada\" data-price=\"₹360\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Koliwada\" data-price=\"₹360\">Order</button></div>
           </div>
         </div>
 
@@ -1941,7 +1932,7 @@
           <p class="item-desc">Crisp shredded chicken tossed in wok with bell peppers, honey glaze, and spicy schezwan sauce.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Popular Starter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Crispy" data-price="₹290">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Crispy\" data-price=\"₹290\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Crispy\" data-price=\"₹290\">Order</button></div>
           </div>
         </div>
 
@@ -1957,7 +1948,7 @@
           <p class="item-desc">Succulent boneless chicken cubes marinated in fresh mint, coriander, and green chilies, chargrilled on charcoal.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Charcoal Grilled</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Pahadi Kebab" data-price="₹310">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Pahadi Kebab\" data-price=\"₹310\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Pahadi Kebab\" data-price=\"₹310\">Order</button></div>
           </div>
         </div>
 
@@ -1973,7 +1964,7 @@
           <p class="item-desc">Fresh soft cottage cheese cubes and bell peppers marinated in fiery spiced hung curd and roasted over hot embers.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Tandoor Veg</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Tikka Angara" data-price="₹280">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Tikka Angara\" data-price=\"₹280\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Tikka Angara\" data-price=\"₹280\">Order</button></div>
           </div>
         </div>
 
@@ -1989,7 +1980,7 @@
           <p class="item-desc">Aromatic long-grain basmati rice layered with tender bone-in goat meat and fragrant saffron in sealed handi.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Handi Dum</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mutton Dum Biryani" data-price="₹380">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mutton Dum Biryani\" data-price=\"₹380\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mutton Dum Biryani\" data-price=\"₹380\">Order</button></div>
           </div>
         </div>
 
@@ -2005,7 +1996,7 @@
           <p class="item-desc">Assorted garden vegetables and paneer layered with saffron basmati rice, fried caramelized onions, and mint.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Dum Cooked</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Hyderabadi Biryani" data-price="₹240">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Hyderabadi Biryani\" data-price=\"₹240\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Hyderabadi Biryani\" data-price=\"₹240\">Order</button></div>
           </div>
         </div>
 
@@ -2021,7 +2012,7 @@
           <p class="item-desc">Piping hot tandoori naan brushed with roasted garlic and melted butter, or rustic Jowar/Bajra Bhakri.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Fresh Breads</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Garlic Butter Naan" data-price="₹60">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Garlic Butter Naan\" data-price=\"₹60\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Garlic Butter Naan\" data-price=\"₹60\">Order</button></div>
           </div>
         </div>
         <!-- Empty State for Live Search -->
@@ -2380,7 +2371,7 @@
           <p class="item-desc">Tender whole chicken leg braised with aromatic spices and caramelized onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Chef Special</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Raan Masala" data-price="₹650">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Raan Masala\" data-price=\"₹650\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Raan Masala\" data-price=\"₹650\">Order</button></div>
           </div>
         </div>
 
@@ -2396,7 +2387,7 @@
           <p class="item-desc">Mutton sukka, spicy Kala Rassa, cooling Pandhra Rassa, 2 Bhakri, and rice.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Best Seller</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Gavran Mutton Thali" data-price="₹390">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Gavran Mutton Thali\" data-price=\"₹390\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Gavran Mutton Thali\" data-price=\"₹390\">Order</button></div>
           </div>
         </div>
 
@@ -2412,7 +2403,7 @@
           <p class="item-desc">Traditional rustic claypot chicken cooked in spicy brown onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Family Favorite</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Handi" data-price="₹380">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Handi\" data-price=\"₹380\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Handi\" data-price=\"₹380\">Order</button></div>
           </div>
         </div>
 
@@ -2428,7 +2419,7 @@
           <p class="item-desc">Dry roasted coconut and Malwani spice tempered tender chicken cuts.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Spicy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Malwani Sukka" data-price="₹320">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Malwani Sukka\" data-price=\"₹320\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Malwani Sukka\" data-price=\"₹320\">Order</button></div>
           </div>
         </div>
 
@@ -2444,7 +2435,7 @@
           <p class="item-desc">Chicken Sukka, Chicken Rassa, Egg Curry, 2 Chapati/Bhakri, Rice & Salad.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Complete Meal</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Special Chicken Thali" data-price="₹310">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Special Chicken Thali\" data-price=\"₹310\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Special Chicken Thali\" data-price=\"₹310\">Order</button></div>
           </div>
         </div>
 
@@ -2460,7 +2451,7 @@
           <p class="item-desc">Chef's royal creation of cottage cheese stuffed with dry fruits in makhani gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">House Specialty</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Rajratna Special" data-price="₹290">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Rajratna Special\" data-price=\"₹290\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Rajratna Special\" data-price=\"₹290\">Order</button></div>
           </div>
         </div>
 
@@ -2476,7 +2467,7 @@
           <p class="item-desc">Spiced vegetable cutlet dumplings tossed in fiery Kolhapuri red gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Kolhapuri Style</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Maratha" data-price="₹260">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Maratha\" data-price=\"₹260\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Maratha\" data-price=\"₹260\">Order</button></div>
           </div>
         </div>
 
@@ -2492,7 +2483,7 @@
           <p class="item-desc">Roasted premium whole cashews simmered in a spiced tomato-onion gravy.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Rich & Creamy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Kaju Masala" data-price="₹280">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Kaju Masala\" data-price=\"₹280\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Kaju Masala\" data-price=\"₹280\">Order</button></div>
           </div>
         </div>
 
@@ -2508,7 +2499,7 @@
           <p class="item-desc">Yellow lentils tempered with ghee, garlic, cumin, and whole dry red chilies.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Comfort Food</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Dal Tadka Double Fry" data-price="₹180">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Dal Tadka Double Fry\" data-price=\"₹180\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Dal Tadka Double Fry\" data-price=\"₹180\">Order</button></div>
           </div>
         </div>
 
@@ -2524,7 +2515,7 @@
           <p class="item-desc">Fresh Kingfish cutlet crumbed with semolina and coastal spices.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Crispy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Surmai Rava Fry" data-price="₹420">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Surmai Rava Fry\" data-price=\"₹420\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Surmai Rava Fry\" data-price=\"₹420\">Order</button></div>
           </div>
         </div>
 
@@ -2540,7 +2531,7 @@
           <p class="item-desc">Whole silver pomfret shallow fried in tangy red chili and garlic paste.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Catch of the Day</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Pomfret Tawa Fry" data-price="₹450">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Pomfret Tawa Fry\" data-price=\"₹450\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Pomfret Tawa Fry\" data-price=\"₹450\">Order</button></div>
           </div>
         </div>
 
@@ -2556,7 +2547,7 @@
           <p class="item-desc">Juicy prawns batter fried in iconic spicy Mumbai Koliwada batter.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Starter</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Prawns Koliwada" data-price="₹360">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Prawns Koliwada\" data-price=\"₹360\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Prawns Koliwada\" data-price=\"₹360\">Order</button></div>
           </div>
         </div>
 
@@ -2572,7 +2563,7 @@
           <p class="item-desc">Crispy fried chicken strips tossed in sweet and tangy schezwan honey glaze.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Popular</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Crispy" data-price="₹290">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Crispy\" data-price=\"₹290\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Crispy\" data-price=\"₹290\">Order</button></div>
           </div>
         </div>
 
@@ -2588,7 +2579,7 @@
           <p class="item-desc">Charcoal-grilled boneless chicken marinated in mint, coriander, and green chilies.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Juicy</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Chicken Pahadi Kebab" data-price="₹310">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Chicken Pahadi Kebab\" data-price=\"₹310\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Chicken Pahadi Kebab\" data-price=\"₹310\">Order</button></div>
           </div>
         </div>
 
@@ -2604,7 +2595,7 @@
           <p class="item-desc">Fresh paneer cubes and crunchy veggies marinated in fiery red spices and chargrilled.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Tandoor Veg</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Paneer Tikka Angara" data-price="₹280">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Paneer Tikka Angara\" data-price=\"₹280\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Paneer Tikka Angara\" data-price=\"₹280\">Order</button></div>
           </div>
         </div>
 
@@ -2620,7 +2611,7 @@
           <p class="item-desc">Aromatic long grain basmati rice cooked with succulent bone-in goat meat.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Dum Cooked</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Mutton Dum Biryani" data-price="₹380">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Mutton Dum Biryani\" data-price=\"₹380\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Mutton Dum Biryani\" data-price=\"₹380\">Order</button></div>
           </div>
         </div>
 
@@ -2636,7 +2627,7 @@
           <p class="item-desc">Fresh assorted vegetables layered with saffron rice, fried onions, and mint.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Veg Choice</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Veg Hyderabadi Biryani" data-price="₹240">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Veg Hyderabadi Biryani\" data-price=\"₹240\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Veg Hyderabadi Biryani\" data-price=\"₹240\">Order</button></div>
           </div>
         </div>
 
@@ -2652,7 +2643,7 @@
           <p class="item-desc">Crisp clay oven baked naan with melted butter, or hot rustic Jowar/Bajra Bhakri.</p>
           <div class="item-bottom">
             <span class="item-tag-pill">Breads</span>
-            <button class="btn btn-outline btn-sm order-dish-btn" data-dish="Garlic Butter Naan" data-price="₹60">Order</button>
+            <div class=\"item-actions-group\"><button class=\"btn-tray-add add-tray-btn\" data-dish=\"Garlic Butter Naan\" data-price=\"₹60\">+ Add</button><button class=\"btn btn-outline btn-sm order-dish-btn\" data-dish=\"Garlic Butter Naan\" data-price=\"₹60\">Order</button></div>
           </div>
         </div>
       </div>
@@ -3086,19 +3077,7 @@
           <div class="brand-logo" style="margin-bottom: 1rem;">
             <div class="brand-icon">
               <!-- Royal Rajratna Crown & Gem Crest -->
-              <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18.5" stroke="#092418" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <circle cx="20" cy="20" r="16.5" stroke="#092418" stroke-width="1.2"/>
-                <path d="M10 24L12.5 14L16.5 19L20 11L23.5 19L27.5 14L30 24H10Z" fill="#092418"/>
-                <rect x="9.5" y="25" width="21" height="3" rx="1.5" fill="#092418"/>
-                <polygon points="20,14 22,18 20,22 18,18" fill="#d99f36"/>
-                <circle cx="12.5" cy="13" r="1.5" fill="#092418"/>
-                <circle cx="20" cy="10" r="1.8" fill="#092418"/>
-                <circle cx="27.5" cy="13" r="1.5" fill="#092418"/>
-                <circle cx="13" cy="26.5" r="0.9" fill="#f3c775"/>
-                <circle cx="20" cy="26.5" r="0.9" fill="#f3c775"/>
-                <circle cx="27" cy="26.5" r="0.9" fill="#f3c775"/>
-              </svg>
+              <img src="images/rajratna-logo.svg" alt="Hotel Rajratna Crest" width="46" height="46">
             </div>
             <div class="brand-info">
               <span class="brand-name">HOTEL RAJRATNA</span>
@@ -3293,6 +3272,108 @@
       </form>
     </div>
   </div>
+
+  <!-- Floating Table Order Tray Bar -->
+  <div id="tableOrderTray" class="table-order-tray">
+    <div class="tray-content">
+      <div class="tray-info">
+        <div class="tray-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </div>
+        <div>
+          <div class="tray-title"><span id="trayItemCount">0</span> Dishes Selected</div>
+          <div class="tray-total">Est. Bill: <strong id="trayTotalPrice">₹0</strong></div>
+        </div>
+      </div>
+      <div class="tray-actions">
+        <button id="openTrayModalBtn" class="btn btn-gold btn-sm">
+          Review & Order ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table Order Review Modal -->
+  <div class="modal-overlay" id="trayModal">
+    <div class="modal-box" style="max-width: 500px;">
+      <button class="modal-close" id="closeTrayModalBtn" aria-label="Close Order Modal">&times;</button>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <img src="images/rajratna-logo.svg" alt="Hotel Rajratna Crest" width="40" height="40" style="border-radius:50%;">
+        <div>
+          <h3 class="modal-title" style="margin-bottom:0.2rem; font-size:1.3rem;">Review Table Order</h3>
+          <p class="modal-subtitle" style="margin-bottom:0;">Order directly to your table via WhatsApp</p>
+        </div>
+      </div>
+
+      <!-- Items List -->
+      <div id="trayModalList" class="tray-modal-items">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div style="background: rgba(226, 171, 70, 0.08); border: 1px dashed var(--gold); border-radius: 10px; padding: 0.75rem 1rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-weight: 600; font-size: 0.95rem;">Total Estimated:</span>
+        <strong id="trayModalTotal" style="font-size: 1.3rem; color: var(--gold-light);">₹0</strong>
+      </div>
+
+      <form id="trayOrderForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="trayTable">Dine-in / Seating *</label>
+            <select id="trayTable" class="form-select" required>
+              <option value="Garden Lawn (Table)" selected>Garden Lawn (Table)</option>
+              <option value="Family Gazebo">Private Family Gazebo</option>
+              <option value="AC Banquet Hall">AC Banquet Hall</option>
+              <option value="Takeaway / Parcel Pickup">Takeaway / Parcel Pickup</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="trayTableNo">Table No. (if seated)</label>
+            <input type="text" id="trayTableNo" class="form-input" placeholder="e.g. Table 5">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="trayGuestName">Your Name *</label>
+            <input type="text" id="trayGuestName" class="form-input" placeholder="e.g. Rahul" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="trayNotes">Special Kitchen Note</label>
+            <input type="text" id="trayNotes" class="form-input" placeholder="e.g. Less spicy, extra onions">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 0.5rem; justify-content: center; font-size: 1.05rem; padding: 0.9rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.97.58 3.89 1.68 5.53L2 22l4.73-1.74c1.58.97 3.4 1.48 5.31 1.48 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.07c-.24.68-1.21 1.25-1.7 1.29-.45.04-.99.06-3.19-.83-2.45-.99-4.04-3.52-4.16-3.68-.12-.17-1-1.33-1-2.54s.64-1.8 1.02-2.19c.12-.13.26-.16.37-.16s.22 0 .32.01c.11.01.26-.04.4.3.16.38.54 1.33.59 1.43.05.1.08.22.01.35-.07.13-.1.21-.2.33-.1.12-.21.27-.3.36-.1.1-.21.21-.09.42.12.21.54.89 1.15 1.44.79.7 1.46.92 1.67 1.02.21.1.33.09.45-.05.12-.14.52-.6.66-.81.14-.21.28-.17.47-.1.19.07 1.22.58 1.43.68.21.1.35.15.4.24.05.09.05.53-.19 1.21z"></path></svg>
+          Send Table Order via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Quick Bar (Under 768px) -->
+  <nav class="mobile-bottom-bar" aria-label="Quick Mobile Navigation">
+    <a href="tel:+919607667961" class="mobile-bar-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Call</span>
+    </a>
+    <a href="#menu" class="mobile-bar-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+      <span>Menu</span>
+    </a>
+    <a href="#reservation" class="mobile-bar-btn open-reservation-modal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Book Table</span>
+    </a>
+    <a href="table-qr-stand.html" class="mobile-bar-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Table QR</span>
+    </a>
+    <a href="https://wa.me/919607667961?text=Hello%20Hotel%20Rajratna!%20I%20would%20like%20to%20place%20an%20order%20%2F%20reserve%20a%20table." target="_blank" class="mobile-bar-btn whatsapp-highlight">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.97.58 3.89 1.68 5.53L2 22l4.73-1.74c1.58.97 3.4 1.48 5.31 1.48 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.07c-.24.68-1.21 1.25-1.7 1.29-.45.04-.99.06-3.19-.83-2.45-.99-4.04-3.52-4.16-3.68-.12-.17-1-1.33-1-2.54s.64-1.8 1.02-2.19c.12-.13.26-.16.37-.16s.22 0 .32.01c.11.01.26-.04.4.3.16.38.54 1.33.59 1.43.05.1.08.22.01.35-.07.13-.1.21-.2.33-.1.12-.21.27-.3.36-.1.1-.21.21-.09.42.12.21.54.89 1.15 1.44.79.7 1.46.92 1.67 1.02.21.1.33.09.45-.05.12-.14.52-.6.66-.81.14-.21.28-.17.47-.1.19.07 1.22.58 1.43.68.21.1.35.15.4.24.05.09.05.53-.19 1.21z"></path></svg>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
